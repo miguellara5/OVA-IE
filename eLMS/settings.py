@@ -28,10 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-fd9b1.up.railway.app',
-    # Añade otros dominios si es necesario
-]
+
 
 
 # Application definition
@@ -167,6 +164,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -175,6 +173,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-fd9b1.up.railway.app',
+    # Añade otros dominios si es necesario
+]
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
